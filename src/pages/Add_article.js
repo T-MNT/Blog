@@ -13,7 +13,8 @@ const Add_article = () => {
       title: title,
       author: author,
       content: content,
-      date : new Date().toLocaleDateString().toString() 
+      date: new Date().toLocaleDateString().toString(),
+      timestamp: Date.now(),
     };
 
     axios.post(

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Article_card from '../components/Article_card';
 
 const Articles = () => {
   const [articles, setArticles] = useState();
@@ -13,6 +14,8 @@ const Articles = () => {
   }, []);
 
   const articlesDisplayer = () => {
+    ///Convert state articles to an array///
+
     let articlesArray = [];
 
     for (let key in articles) {
@@ -24,18 +27,22 @@ const Articles = () => {
       articlesArray.push(article);
     }
 
-    // return (
-    //     articlesArray.map((article) => )
-    // )
+    ///////////Display Articles/////////////
 
-    console.log(articlesArray);
+    return articlesArray.map((article) => (
+      <Article_card
+        title={article.article.title}
+        author={article.article.author}
+        date={article.article.date}
+        content={article.article.content}
+      />
+    ));
   };
-
-  articlesDisplayer();
 
   return (
     <div>
       <h1>Articles</h1>
+      <ul>{articlesDisplayer()}</ul>
     </div>
   );
 };
