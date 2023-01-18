@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/article_card.css';
 
 const Article_card = (props) => {
   return (

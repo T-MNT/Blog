@@ -3,6 +3,7 @@ import routes from './config/routes';
 import Home from './pages/Home';
 import Articles from './pages/Articles';
 import Add_article from './pages/Add_article';
+import './style/app.css';
 
 function App() {
   return (

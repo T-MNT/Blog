@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
 
 const Add_article = () => {
   const [title, setTitle] = useState('');
@@ -25,6 +26,7 @@ const Add_article = () => {
 
   return (
     <div>
+      <Navbar />
       <h1>Créer un nouvel article.</h1>
 
       <form onSubmit={(e) => sendArticle(e)}>

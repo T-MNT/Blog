@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Article_card from '../components/Article_card';
+import Navbar from '../components/Navbar';
+import '../style/articles.css';
 
 const Articles = () => {
   const [articles, setArticles] = useState();
@@ -41,6 +43,7 @@ const Articles = () => {
 
   return (
     <div>
+      <Navbar />
       <h1>Articles</h1>
       <ul>{articlesDisplayer()}</ul>
     </div>
