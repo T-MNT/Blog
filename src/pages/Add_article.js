@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 const Add_article = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [intro, setIntro] = useState('');
   const [content, setContent] = useState('');
 
   const sendArticle = (e) => {
@@ -13,6 +14,7 @@ const Add_article = () => {
     const article = {
       title: title,
       author: author,
+      intro: intro,
       content: content,
       date: new Date().toLocaleDateString().toString(),
       timestamp: Date.now(),
@@ -41,6 +43,12 @@ const Add_article = () => {
           type="text"
           maxLength={36}
           onChange={(e) => setAuthor(e.target.value)}
+        />
+        <label>Introduction</label>
+        <textarea
+          type="text"
+          maxLength={540}
+          onChange={(e) => setIntro(e.target.value)}
         />
         <label>Article</label>
         <textarea onChange={(e) => setContent(e.target.value)} />
