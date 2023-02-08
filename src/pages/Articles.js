@@ -58,8 +58,7 @@ const Articles = () => {
   return (
     <div>
       <Navbar />
-      <h1>Articles</h1>
-      <ul>{articlesDisplayer()}</ul>
+      <ul className="articles-list">{articlesDisplayer()}</ul>
       <ReactMarkdown children="## Heading level 2" />
     </div>
   );
